@@ -29,9 +29,9 @@
 ## 使用教程
 1. 服务器安装node和Mongodb（若需要路由，请安装Nginx）
 2. 获取源码：`git@github.com:tsichiro/roadofvaccine.git`
-3. 导入疫苗数据到Mongodb，数据在[](csv)中，操作详见[](src/import.sh)
-4. 启动服务，`node vaccine.js`。若想修改查询逻辑，详见[](src/vaccine.js)。
-5. 使用浏览器查看效果。若想修改产商和展示效果，修改 [](src/vaccine.html)中的companies等。
+3. 导入疫苗数据到Mongodb，数据在[csv](csv)中，操作详见[src/import.sh](src/import.sh)
+4. 启动服务，`node vaccine.js`。若想修改查询逻辑，详见[src/vaccine.js](src/vaccine.js)。
+5. 使用浏览器查看效果。若想修改产商和展示效果，修改 [src/vaccine.html](src/vaccine.html)中的companies等。
 
 欢迎 Star 和 Fork ~
 
