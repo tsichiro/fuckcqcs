@@ -1,59 +1,42 @@
-# fuckcqcs
+# RoadofVaccine
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/) [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
-[![Build Status](https://img.shields.io/github/stars/fuckcqcs/fuckcqcs.svg)](https://github.com/fuckcqcs/fuckcqcs)
-[![Build Status](https://img.shields.io/github/forks/fuckcqcs/fuckcqcs.svg)](https://github.com/fuckcqcs/fuckcqcs)
-[![Build Status](https://img.shields.io/badge/README-English-yellow.svg)](README_EN.md)
+疫苗作为舆论热点已经过去，我们国家太大，每天都有新的事情吸引眼球。
 
-## 前言
-本文首发于个人的公众号和v2ex，事先也没想到会有这么多人关注。
+而你，有权利了解你和家人**注射了什么疫苗，来自于哪里**。
+请看看“[疫苗之路](http://www.tangsan.name/vaccinenoharm)”吧。
 
-由于本人文案水平不高，原先文中对此次疫苗事件背景的描述并不严谨的措辞。
-
-v2ex账号因为没验证手机，也登陆不上了。所以后续更新基本会在github。
-
-本文观点从技术讨论出发，尽量客观中立。
-
-## 郑重声明 
-
-- 数据年份是2016至2018年间的数据，
-    - 每个省份一个数据，仅以能找到的最新的数据为主
-    - 不考虑增补数据（每年第一批疫苗集中采购后，后续会根据政策再开第二批，第三批等等）
-- 本文主要讨论的观点
-
-    - **并不是本次新闻里的问题疫苗数据**
-    - **并不是本次新闻里的问题疫苗数据**
-    - **并不是本次新闻里的问题疫苗数据**
-    
-    本文讨论的观点是
-    - 此次问题疫苗事件相关企业的各类疫苗在各省份的销售情况
-    - 由于年度跨度长（2016-2018）所以批次范围不考虑数据批次
-
-## 数据整理情况
-除港澳台，其他省份均以收录
+![](screenshot/vaccine.gif)
 
 
+## 数据可视化
+- [x] **各厂商疫苗流转**
+- [x] **各省市疫苗种类对比**
+- [x] **各省市疫苗种类详情**
+- [x] **导出图片**
 
-## 常见的Q&A
 
-- 有没有打赏的渠道？
-    -  这不是生意，不需要打赏（我怕控制不住我自己）
-    -  后续很多其他的数据都是其他网友提供，我只是修修补补
-    -  平时挺忙的，也就是下班才能进行修改
-    -  所以一般晚上才进行回复
+## 数据来源
+[fuckcqcs](https://github.com/fuckcqcs/fuckcqcs)
 
-- 出于什么目的做了这个 
-    - 程序员的思路，看到一个企业的疫苗不合格，自然会想到它其他的疫苗情况
-    - 但是去它官网看的时候，官网也挂了，只能手动进行搜索
-    - 然后把搜索的关键字记录了下来，方便以后重新搜索
 
-- 用爬虫去爬的数据吗？
-    - 不是！我是手工去搜索的，把数据另存为然后用脚本处理了以下
-    - 所有的数据基本都是政府公示的信息中获取     
+##  原理
+- 前端：**echarts**
+- 后端：**nodeJS**
+- 数据库：**Mongodb**
 
-- 为啥查不到批次
-    - 此次问题疫苗事件相关企业的各类疫苗在各省份的销售情况
-    - 由于年度跨度长（2016-2018）所以批次范围不考虑数据批次
 
-- 长春长生不是cccs吗？cqcs是啥意思？
-    - 我广东的，普通话不太准
-# 致谢列表
+## 使用教程
+1. 服务器安装node和Mongodb（若需要路由，请安装Nginx）
+2. 获取源码：`git@github.com:tsichiro/roadofvaccine.git`
+3. 导入疫苗数据到Mongodb，数据在[](csv)中，操作详见[](src/import.sh)
+4. 启动服务，`node vaccine.js`。若想修改查询逻辑，详见[](src/vaccine.js)。
+5. 使用浏览器查看效果。若想修改产商和展示效果，修改 [](src/vaccine.html)中的companies等。
+
+欢迎 Star 和 Fork ~
+
+如果你有什么问题，欢迎关注我的微信公众号留言，我都会一一解答
+
+![](screenshot/qrcode_tsichiro11.jpg)
+
+
